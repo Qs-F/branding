@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .p-loading > div.loading > div {
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        border-radius: 50%;
+      }
+      
+      .p-loading div.loading {
+        width: 56px;
+        height: 56px;
+        position: fixed;
+        top: calc(50vh - 28px);
+        left: calc(50vw - 28px);
+        -webkit-animation: rotate .5s infinite;
+      }
+      
+      @-webkit-keyframes rotate {
+        0%   {transform: rotate(0deg);}
+        50%  {transform: rotate(180deg);}
+        100% {transform: rotate(360deg);}
+      }
+      
+      .p-loading .white {
+        z-index: 5;
+        top: 4px;
+        left: 4px;
+        bottom: 4px;
+        right: 4px;
+        background-color: #fff;
+      }
+      
+      .p-loading .blue {
+        z-index: 4;
+        top: 0;
+        left: 0;
+        background-color: #00a0c8;
+      }
+      
+      .p-loading .green {
+        z-index: 3;
+        bottom: 0;
+        left: 0;
+        background-color: #00a050;
+      }
+      
+      .p-loading .orange {
+        z-index: 2;
+        top: 0;
+        right: 0;
+        background-color: #ffa050;
+      }
+      
+      .p-loading .pink {
+        z-index: 1;
+        bottom: 0;
+        right: 0;
+        background-color: #ffa0c8;
+      }
+    </style>
+  </head>
+  <body>
+  <div class="p-loading">
+    <div class="loading">
+      <div class="white"></div>
+      <div class="blue"></div>
+      <div class="green"></div>
+      <div class="orange"></div>
+      <div class="pink"></div>
+    </div>
+  </div>
+  </body>
+</html>
